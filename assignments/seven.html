@@ -1,25 +1,44 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Text Input Fields</title>
-  </head>
-  <body>
+<head>
+    <title>HTML Forms</title>
+</head>
+<body>
 
-    <h2>Text input fields</h2>
+<h1>HTML FORMS</h1>
 
-    <form>
-      <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname" value=""><br>
+<form>
 
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname" value=""><br>
-      <select>
-        <option>job oportunity</option>
-        <option>freelance project</option>
-        <option>collaboration</option>
-      </select>
-      <br>
-      <input type="submit" value="send message"
-    </form>
-<a href="https://sanikagowda24.github.io/sem4-fet/assignments/six.html">assignment6</a>
-  </body>
+    <!-- First Name -->
+    <label>First Name:</label><br>
+    <input type="text" placeholder="First Name"><br><br>
+
+    <!-- Last Name -->
+    <label>Last Name:</label><br>
+    <input type="text" placeholder="Last Name"><br><br>
+
+    <!-- Course -->
+    <label>Course:</label><br>
+    <select>
+        <option value="">-- Please choose an option --</option>
+        <option value="cse">CSE</option>
+        <option value="ece">ECE</option>
+        <option value="research">Research</option>
+        <option value="java">Java</option>
+    </select><br><br>
+
+    <!-- USN -->
+    <label>USN:</label><br>
+    <input type="text" placeholder="USN"><br><br>
+
+    <!-- Feedback -->
+    <label>Feedback:</label><br>
+    <textarea placeholder="Enter your feedback"></textarea><br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
 </html>
