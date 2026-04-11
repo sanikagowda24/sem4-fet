@@ -1,33 +1,32 @@
 body {
-  background: lightblue;
-}
-
-h1 {
-  text-align: center;
-  color: red;
-  font-family: arial;
+    background-color: lightblue;
+    font-family: Arial;
 }
 
 h2 {
-  color: tomato;
-  font-family: arial;
-  text-align: center;
+    text-align: center;
+    color: darkblue;
 }
 
-.box {
-  border: 2px solid black;
-  width: 60%;
-  margin: auto;
-  padding: 15px;
-  background-color: white;
+ol {
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
 }
 
-p {
-  margin: 10px 0;
+li {
+    margin: 10px 0;
+}
+
+ul {
+    margin-top: 5px;
 }
 
 a {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
 }
