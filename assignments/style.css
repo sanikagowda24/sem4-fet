@@ -1,4 +1,33 @@
-body
-{
-  background-color:lightblue;
+body {
+  background: lightblue;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  font-family: arial;
+}
+
+h2 {
+  color: tomato;
+  font-family: arial;
+  text-align: center;
+}
+
+.box {
+  border: 2px solid black;
+  width: 60%;
+  margin: auto;
+  padding: 15px;
+  background-color: white;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
 }
