@@ -1,85 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My portfolio</title>
 
-    <style>
-        p {
-            text-align: center;
-        }
+<title>My portfolio</title>
 
-        h1 {
-            color: red;
-            text-align: center;
-        }
+<style>
+p{
+  text-align: center;
+}
 
-        h2 {
-            color: purple;
-            text-align: center;
-        }
+h1 {
+  color: red;
+  text-align:center;
+}
 
-        .box {
-            border: 2px solid black;
-            width: 60%;
-            margin: auto;
-            padding: 15px;
-            background-color: white;
-        }
+h2 {
+  color: purple;
+  text-align:center;
+}
 
-        button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: darkgreen;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+.box{
+  border:2px solid black;
+  width:60%;
+  margin:auto;
+  padding:15px;
+  background-color:white; 
+}
+</style>
 
-        button:hover {
-            background-color: green;
-        }
-    </style>
 </head>
 
-<body style="background-color:lightgreen; font-size: 18px;">
+<body style="background-color:lightgreen; font-size:18px;">
 
-    <h1 style="font-size: 50px;">SANIKA N</h1>
+<h1 style="font-size:50px;">SANIKA N</h1>
 
-    <h2>
-        Computer Science Student At Mangalore Institute Of Technology And Engineering
-    </h2>
+<h2>
+Computer Science Student At Mangalore Institute Of Technology And Engineering
+</h2>
 
-    <div class="box">
-        <p style="font-size: 20px;">
-            I am good in C and Java.
-        </p>
+<div class="box">
 
-        <p>
-            I have strong communication skills.
-        </p>
+<p style="font-size:20px;">
+I am good in C and Java.
+</p>
 
-        <p>
-            I am a quick learner and always ready to explore new technologies.
-            I have basic knowledge of HTML and web development.
-        </p>
-    </div>
+<p>
+I have strong communication skills.
+</p>
 
-    <!-- Button for JavaScript -->
-    <button onclick="showMessage()">Click Me</button>
+<p>
+I am a quick learner and always ready to explore new technologies.
+I have basic knowledge of HTML and web development.
+</p>
 
-    <p id="demo" style="text-align:center; font-weight:bold;"></p>
+</div>
 
-    <a href="https://sanikagowda24.github.io/sem4-fet">Go to HomePage</a>
+<button onclick="showMessage()">Click me</button>
 
-    <!-- JavaScript -->
-    <script>
-        function showMessage() {
-            document.getElementById("demo").innerHTML = 
-                "Welcome to my portfolio! 😊";
-        }
-    </script>
+<p id="msg" style="text-align:center;"></p>
+
+<a href="https://sanikagowda24.github.io/sem4-fet">go to HomePage</a>
+
+<script>
+function showMessage() {
+  document.getElementById("msg").innerHTML = "Welcome to my portfolio!";
+}
+</script>
 
 </body>
 </html>
