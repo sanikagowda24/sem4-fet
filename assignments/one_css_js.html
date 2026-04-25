@@ -49,7 +49,7 @@ I have basic knowledge of HTML and web development.
 </p>
 </div>
 
-<button onclick="changeText()">Click me</button>
+<button onclick="changeText()">Change Rule</button>
 
 <a href="https://sanikagowda24.github.io/sem4-fet">go to HomePage</a>
 
@@ -57,7 +57,9 @@ I have basic knowledge of HTML and web development.
 function changeText() {
   var old = document.getElementById("course").innerHTML;
 
-  var x = prompt("Old value is:\n" + old + "\n\nEnter new value:");
+  alert("Previous value is:\n" + old);
+
+  var x = prompt("Enter new value:");
 
   if(x != null && x != "") {
     document.getElementById("course").innerHTML = x;
