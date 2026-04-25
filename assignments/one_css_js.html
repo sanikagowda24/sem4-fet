@@ -34,7 +34,7 @@ h2 {
 
 <h1 style="font-size:50px;">SANIKA N</h1>
 
-<h2>
+<h2 id="course">
 Computer Science Student At Mangalore Institute Of Technology And Engineering
 </h2>
 
@@ -55,15 +55,13 @@ I have basic knowledge of HTML and web development.
 
 </div>
 
-<button onclick="showMessage()">Click me</button>
-
-<p id="msg" style="text-align:center;"></p>
+<button onclick="changeText()">Click me</button>
 
 <a href="https://sanikagowda24.github.io/sem4-fet">go to HomePage</a>
 
 <script>
-function showMessage() {
-  document.getElementById("msg").innerHTML = "Welcome to my portfolio!";
+function changeText() {
+  document.getElementById("course").innerHTML = "I love Web Development!";
 }
 </script>
 
