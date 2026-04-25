@@ -1,24 +1,17 @@
-<!DOCTYPE html>
 <html>
 <head>
-
-<title>My portfolio</title>
-
 <style>
 p{
   text-align: center;
 }
-
 h1 {
   color: red;
   text-align:center;
 }
-
 h2 {
-  color: purple;
-  text-align:center;
+  color:purple;
+  text-align:center
 }
-
 .box{
   border:2px solid black;
   width:60%;
@@ -27,20 +20,22 @@ h2 {
   background-color:white; 
 }
 </style>
-
 </head>
 
-<body style="background-color:lightgreen; font-size:18px;">
+<body style="background-color:lightgreen ;font-size: 18px;">
 
-<h1 style="font-size:50px;">SANIKA N</h1>
+<title>
+My portfolio
+</title>
+
+<h1 style="font-size: 50px;">SANIKA N</h1>
 
 <h2 id="course">
-Aspiring Student Engineer
+Computer Science Student At Mangalore Institute Of Technology And Engineering
 </h2>
 
 <div class="box">
-
-<p style="font-size:20px;">
+<p style="font-size: 20px;">
 I am good in C and Java.
 </p>
 
@@ -52,7 +47,6 @@ I have strong communication skills.
 I am a quick learner and always ready to explore new technologies.
 I have basic knowledge of HTML and web development.
 </p>
-
 </div>
 
 <button onclick="changeText()">Click me</button>
@@ -61,7 +55,8 @@ I have basic knowledge of HTML and web development.
 
 <script>
 function changeText() {
-  document.getElementById("course").innerHTML = "Computer Science Student At Mangalore Institute Of Technology And Engineering";
+  var x = prompt("Type new text");
+  document.getElementById("course").innerHTML = x;
 }
 </script>
 
