@@ -1,71 +1,68 @@
 <html>
-<head>
-<style>
-p{
-  text-align: center;
-}
-h1 {
-  color: red;
-  text-align:center;
-}
-h2 {
-  color:purple;
-  text-align:center
-}
-.box{
-  border:2px solid black;
-  width:60%;
-  margin:auto;
-  padding:15px;
-  background-color:white; 
-}
-</style>
-</head>
+    <head>
+    <style>
+      p{
+        text-align: center;
+      }
+        h1 {
+            color: red;
+            text-align:center;
+           }
+          h2 {
+            color:purple;
+            text-align:center
+           }
+        .box{
+            border:2px solid black;
+            width:60%;
+            margin:auto;
+            padding:15px;
+            background-color:white; 
+        }
+    </style>
+  </head>
+  <body style="background-color:lightgreen ;font-size: 18px;">
+      
+        <title>
+      My portfolio
+    </title>
+      
+    
+    <h1 style="font-size: 50px;">SANIKA N</h1>
 
-<body style="background-color:lightgreen ;font-size: 18px;">
+    <h2>
+      Computer Science Student At Mangalore Institute Of Technology And Engineering
+    </h2>
+      <div class="box">
+    <p style="font-size: 20px;">
+      I am good in C and Java.
+    </p>
 
-<title>
-My portfolio
-</title>
+    <p>
+      I have strong communication skills.
+    </p>
 
-<h1 style="font-size: 50px;">SANIKA N</h1>
+    <p>
+      I am a quick learner and always ready to explore new technologies.
+       I have basic knowledge of HTML and web development.
+    </p>
+      </div>
+    <br>
 
-<h2 id="course">
-Computer Science Student At Mangalore Institute Of Technology And Engineering
-</h2>
+  <button onclick="changeRole()">Change role</button>
 
-<div class="box">
-<p style="font-size: 20px;">
-I am good in C and Java.
-</p>
+  <script>
+    function changeRole()
+    {
+      var role = prompt("Enter new role:", document.getElementById("role").innerHTML);
+      document.getElementById("role").innerHTML = role;
+    }
+  </script>
 
-<p>
-I have strong communication skills.
-</p>
+  <br><br>
 
-<p>
-I am a quick learner and always ready to explore new technologies.
-I have basic knowledge of HTML and web development.
-</p>
-</div>
-
-<button onclick="changeText()">Change Rule</button>
-
-<a href="https://sanikagowda24.github.io/sem4-fet">go to HomePage</a>
-
-<script>
-function changeText() {
-  var old = document.getElementById("course").innerHTML;
-
-  alert("Previous value is:\n" + old);
-
-  var x = prompt("Enter new value:");
-
-  if(x != null && x != "") {
-    document.getElementById("course").innerHTML = x;
-  }
-}
-</script>
-
-</body>
+  <a href="https://sanikagowda24.github.io/sem4-fet">go to HomePage</a>
+  </body>
+    
 </html>
+
