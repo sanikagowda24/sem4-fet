@@ -6,7 +6,7 @@
 
 <body>
 
-<h2>Skills Matrix (Interactive Version Fixed)</h2>
+<h2>Skills Matrix (Fixed Version)</h2>
 
 <ol>
   <li>FRONTEND DEVELOPMENT
@@ -42,66 +42,71 @@ function changeSkill(){
 
     let category = prompt("Select Category:\n1 - Frontend\n2 - Styling\n3 - Tools");
 
-    if(!category) return;
+    if(category === null){
+        return;
+    }
 
     category = category.trim();
 
     let id = "";
-    let i;
+    let option;
 
-    if(category == "1"){
-        i = prompt("Select Skill:\n1 - HTML5\n2 - CSS\n3 - JavaScript");
-        if(!i) return;
-        i = i.trim();
+    switch(category){
 
-        if(i == "1") id = "f1";
-        else if(i == "2") id = "f2";
-        else if(i == "3") id = "f3";
-        else {
-            alert("Invalid skill selection");
+        case "1":
+            option = prompt("Frontend:\n1 HTML5\n2 CSS\n3 JavaScript");
+            if(option === null) return;
+            option = option.trim();
+
+            if(option === "1") id = "f1";
+            else if(option === "2") id = "f2";
+            else if(option === "3") id = "f3";
+            else {
+                alert("Invalid selection");
+                return;
+            }
+            break;
+
+        case "2":
+            option = prompt("Styling:\n1 Bootstrap\n2 Tailwind CSS");
+            if(option === null) return;
+            option = option.trim();
+
+            if(option === "1") id = "s1";
+            else if(option === "2") id = "s2";
+            else {
+                alert("Invalid selection");
+                return;
+            }
+            break;
+
+        case "3":
+            option = prompt("Tools:\n1 Git\n2 GitHub\n3 VS Code");
+            if(option === null) return;
+            option = option.trim();
+
+            if(option === "1") id = "t1";
+            else if(option === "2") id = "t2";
+            else if(option === "3") id = "t3";
+            else {
+                alert("Invalid selection");
+                return;
+            }
+            break;
+
+        default:
+            alert("Invalid category (Enter only 1, 2 or 3)");
             return;
-        }
     }
 
-    else if(category == "2"){
-        i = prompt("Select Skill:\n1 - Bootstrap\n2 - Tailwind CSS");
-        if(!i) return;
-        i = i.trim();
+    let newSkill = prompt("Enter new skill name:");
 
-        if(i == "1") id = "s1";
-        else if(i == "2") id = "s2";
-        else {
-            alert("Invalid skill selection");
-            return;
-        }
-    }
-
-    else if(category == "3"){
-        i = prompt("Select Skill:\n1 - Git\n2 - GitHub\n3 - VS Code");
-        if(!i) return;
-        i = i.trim();
-
-        if(i == "1") id = "t1";
-        else if(i == "2") id = "t2";
-        else if(i == "3") id = "t3";
-        else {
-            alert("Invalid skill selection");
-            return;
-        }
-    }
-
-    else {
-        alert("Invalid category selection");
-        return;
-    }
-
-    let newSkill = prompt("Enter new skill:");
-    if(!newSkill || newSkill.trim() === ""){
+    if(newSkill === null || newSkill.trim() === ""){
         alert("Invalid input");
         return;
     }
 
-    document.getElementById(id).innerHTML = newSkill;
+    document.getElementById(id).innerHTML = newSkill.trim();
 
     alert("Skill updated successfully!");
 }
