@@ -1,1 +1,56 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+    <title>Skills Lists</title>
+</head>
 
+<body>
+
+<h2>Skills Matrix (Nested Lists)</h2>
+
+<ol type="A">
+    <li>Frontend Development
+        <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </li>
+
+    <li>Styling and Framework
+        <ul>
+            <li>Bootstrap</li>
+            <li>Tailwind CSS</li>
+        </ul>
+    </li>
+
+    <li>Tools and Platforms
+        <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+        </ul>
+    </li>
+<button onclick="changeFrontendList()">Change List</button>
+
+<script>
+function changeFrontendList() {
+    let newTool = prompt("Enter a new Frontend tool name:");
+
+    if (newTool === null || newTool.trim() === "") {
+        alert("Please enter a tool name!");
+    } else {
+        let list = document.getElementById("frontendList");
+        let item = document.createElement("li");
+
+        item.textContent = newTool;
+        list.appendChild(item);
+
+        alert(newTool + " added to the list!");
+    }
+}
+</script>
+</ol>
+<a href="https://sanikagowda24.github.io/sem4-fet/assignments/four.html">assignment4</a>
+</body>
+</html>
