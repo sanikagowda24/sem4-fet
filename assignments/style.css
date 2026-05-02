@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: gray;
     font-family: Arial;
 }
 
@@ -11,7 +11,7 @@ h2 {
 ol {
     width: 50%;
     margin: auto;
-    background-color: white;
+    background-color: purple;
     padding: 20px;
     border: 2px solid black;
 }
