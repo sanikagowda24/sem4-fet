@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Form</title>
 
+<style>
+body { font-family: Arial; background:lightgray; }
+.box {
+    width: 380px;
+    margin: auto;
+    background: teal;
+    padding: 50px;
+    border-radius: 40px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+button {
+    width: 100%;
+    background: green;
+    color: black;
+    border: 2px solid;
+    padding: 10px;
+}
+</style>
+
+<script>
+function showData(e) {
+
+    e.preventDefault();
+
+    let n = document.getElementById("name").value;
+    let u = document.getElementById("usn").value;
+    let em = document.getElementById("email").value; 
+    let b = document.getElementById("branch").value;
+
+    let sub = document.getElementById("sub");
+    let s = "";
+
+    for (let i = 0; i < sub.length; i++) {
+        if (sub[i].selected) {
+            s += sub[i].value + ", ";
+        }
+    }
+
+    // Validation
+    if (n == "") {
+        alert("Enter name");
+        return;
+    }
+
+    if (u.length != 10) {
+        alert("USN must be 10 characters");
+        return;
+    }
+
+    if (em == "" || !em.includes("@")) {  
+        alert("Enter valid email");
+        return;
+    }
+
+    // Output
+    document.getElementById("out").innerHTML =
+        "<b>Details:</b><br>" +
+        "Name: " + n + "<br>" +
+        "USN: " + u + "<br>" +
+        "Email: " + em + "<br>" +
+        "Branch: " + b + "<br>" +
+        "Subjects: " + s;
+}
+</script>
+</head>
+
+<body>
+
+<div class="box">
+
+<h3 align="center">Student Form</h3>
+
+<form onsubmit="showData(event)">
+
+<input type="text" id="name" placeholder="Enter Name">
+
+<input type="text" id="usn" placeholder="Enter USN">
+
+<input type="text" id="email" placeholder="Enter Email">
+
+<select id="branch">
+<option value="">Select Branch</option>
+<option>CSE</option>
+<option>ECE</option>
+<option>CS-AIML</option>
+<option>IS</option>
+</select>
+
+<select id="sub" multiple size="4">
+<option>OS</option>
+<option>Maths</option>
+<option>DAA</option>
+<option>Embedded</option>
+</select>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<div id="out" style="margin-top:10px;"></div>
+
+</div>
+
+</body>
+</html>
