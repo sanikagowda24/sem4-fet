@@ -1,92 +1,239 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" href="style.css">
+
+<title>Skills Matrix</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, indigo, mediumorchid);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.box{
+    width:500px;
+    background: rgba(255,255,255,0.1);
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 0 15px black;
+}
+
+h2{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+ol{
+    font-size:22px;
+}
+
+ul{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+li{
+    margin:8px 0;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:lavender;
+    color:indigo;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:white;
+}
+
+p{
+    margin-top:20px;
+}
+
+a{
+    color:lavender;
+    text-decoration:none;
+    margin:15px;
+    font-size:20px;
+}
+
+a:hover{
+    color:white;
+    text-decoration:underline;
+}
+
+</style>
+
 </head>
 
 <body>
-  
-<h2>Skills Matrix (Nested Lists)</h2>
 
+<div class="box">
+
+<h2>Skills Matrix</h2>
 
 <ol>
-  <li>FRONTEND DEVELOPMENT
-    <ul>
-      <li id="f1">HTML5</li>
-      <li id="f2">CSS3</li>
-      <li id="f3">JavaScript</li>
-    </ul>
-  </li>
 
-  <li>STYLING & FRAMEWORK
-    <ul>
-      <li id="s1">Bootstrap</li>
-      <li id="s2">Tailwind CSS</li>
-    </ul>
-  </li>
+<li>
+FRONTEND DEVELOPMENT
 
-  <li>TOOLS & PLATFORMS
-    <ul>
-      <li id="t1">Git</li>
-      <li id="t2">GitHub</li>
-      <li id="t3">VS Code</li>
-    </ul>
-  </li>
+<ul>
+
+<li id="f1">HTML5</li>
+
+<li id="f2">CSS3</li>
+
+<li id="f3">JavaScript</li>
+
+</ul>
+
+</li>
+
+<li>
+STYLING & FRAMEWORK
+
+<ul>
+
+<li id="s1">Bootstrap</li>
+
+<li id="s2">Tailwind CSS</li>
+
+</ul>
+
+</li>
+
+<li>
+TOOLS & PLATFORMS
+
+<ul>
+
+<li id="t1">Git</li>
+
+<li id="t2">GitHub</li>
+
+<li id="t3">VS Code</li>
+
+</ul>
+
+</li>
+
 </ol>
- <p style="text-align:center;">
-     <button onclick="changeSkill()">CLICK ME TO CHANGE SKILL</button>
+
+<p style="text-align:center;">
+
+<button onclick="changeSkill()">
+CLICK ME TO CHANGE SKILL
+</button>
+
 </p>
+
+</div>
+
 <script>
+
 function changeSkill(){
-  debugger;
 
-  let c = prompt("Select Category:\n1-Frontend\n2-Styling\n3-Tools");
-  let id = "";
+    debugger;
 
-  if(c == 1){
-    let i = prompt("Select Skill Number (1-3)");
-    if(i == 1) id = "f1";
-    else if(i == 2) id = "f2";
-    else if(i == 3) id = "f3";
-    else {
-      alert("Invalid skill");
-      return;
+    let c = prompt("Select Category:\n1-Frontend\n2-Styling\n3-Tools");
+
+    let id = "";
+
+    if(c == 1){
+
+        let i = prompt("Select Skill Number (1-3)");
+
+        if(i == 1) id = "f1";
+
+        else if(i == 2) id = "f2";
+
+        else if(i == 3) id = "f3";
+
+        else{
+
+            alert("Invalid skill");
+
+            return;
+        }
     }
-  }
-  else if(c == 2){
-    let i = prompt("Select Skill Number (1-2)");
-    if(i == 1) id = "s1";
-    else if(i == 2) id = "s2";
-    else {
-      alert("Invalid skill");
-      return;
-    }
-  }
-  else if(c == 3){
-    let i = prompt("Select Skill Number (1-3)");
-    if(i == 1) id = "t1";
-    else if(i == 2) id = "t2";
-    else if(i == 3) id = "t3";
-    else {
-      alert("Invalid skill");
-      return;
-    }
-  }
-  else{
-    alert("Invalid category");
-    return;
-  }
 
-  let newSkill = prompt("Enter new skill");
-  document.getElementById(id).innerHTML = newSkill;
-  alert("Updated!");
+    else if(c == 2){
 
+        let i = prompt("Select Skill Number (1-2)");
+
+        if(i == 1) id = "s1";
+
+        else if(i == 2) id = "s2";
+
+        else{
+
+            alert("Invalid skill");
+
+            return;
+        }
+    }
+
+    else if(c == 3){
+
+        let i = prompt("Select Skill Number (1-3)");
+
+        if(i == 1) id = "t1";
+
+        else if(i == 2) id = "t2";
+
+        else if(i == 3) id = "t3";
+
+        else{
+
+            alert("Invalid skill");
+
+            return;
+        }
+    }
+
+    else{
+
+        alert("Invalid category");
+
+        return;
+    }
+
+    let newSkill = prompt("Enter new skill");
+
+    document.getElementById(id).innerHTML = newSkill;
+
+    alert("Updated!");
 }
+
 </script>
-   <p style="text-align:center;">
-  <a href="https://sanikagowda24.github.io/sem4-fet">go to HomePage</a>
-       <a href="https://sanikagowda24.github.io/sem4-fet/assignments/one_css_js.html">1 javascript</a> 
+
+<p>
+
+<a href="https://sanikagowda24.github.io/sem4-fet">
+Go to HomePage
+</a>
+
+<a href="https://sanikagowda24.github.io/sem4-fet/assignments/one_css_js.html">
+1 JavaScript
+</a>
+
 </p>
-    
-  
+
 </body>
 </html>
