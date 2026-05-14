@@ -4,72 +4,140 @@
 <title>Student Form</title>
 
 <style>
-body { font-family: Arial; background:lightgray; }
-.box {
-    width: 380px;
-    margin: auto;
-    background: teal;
-    padding: 50px;
-    border-radius: 40px;
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, indigo, mediumorchid);
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
 }
-input, select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+
+.box{
+    width:380px;
+    background: rgba(255,255,255,0.1);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 0 15px black;
 }
-button {
-    width: 100%;
-    background: green;
-    color: black;
-    border: 2px solid;
-    padding: 10px;
+
+h3{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:20px;
 }
+
+input, select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    background:lavender;
+    color:indigo;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:white;
+}
+
+#out{
+    margin-top:15px;
+    font-size:18px;
+}
+
+p{
+    margin-top:20px;
+}
+
+a{
+    color:lavender;
+    text-decoration:none;
+    margin:15px;
+    font-size:20px;
+}
+
+a:hover{
+    color:white;
+    text-decoration:underline;
+}
+
 </style>
 
 <script>
-function showData(e) {
+
+function showData(e){
 
     e.preventDefault();
 
     let n = document.getElementById("name").value;
     let u = document.getElementById("usn").value;
-    let em = document.getElementById("email").value; 
+    let em = document.getElementById("email").value;
     let b = document.getElementById("branch").value;
 
     let sub = document.getElementById("sub");
+
     let s = "";
 
-    for (let i = 0; i < sub.length; i++) {
-        if (sub[i].selected) {
+    for(let i=0; i<sub.length; i++){
+
+        if(sub[i].selected){
+
             s += sub[i].value + ", ";
         }
     }
 
-    // Validation
-    if (n == "") {
-        alert("Enter name");
+    if(n==""){
+
+        alert("Enter Name");
+
         return;
     }
 
-    if (u.length != 10) {
+    if(u.length != 10){
+
         alert("USN must be 10 characters");
+
         return;
     }
 
-    if (em == "" || !em.includes("@")) {  
-        alert("Enter valid email");
+    if(em=="" || !em.includes("@")){
+
+        alert("Enter Valid Email");
+
         return;
     }
 
-    // Output
     document.getElementById("out").innerHTML =
-        "<b>Details:</b><br>" +
-        "Name: " + n + "<br>" +
-        "USN: " + u + "<br>" +
-        "Email: " + em + "<br>" +
-        "Branch: " + b + "<br>" +
-        "Subjects: " + s;
+
+    "<b>Details:</b><br><br>" +
+
+    "Name : " + n + "<br>" +
+
+    "USN : " + u + "<br>" +
+
+    "Email : " + em + "<br>" +
+
+    "Branch : " + b + "<br>" +
+
+    "Subjects : " + s;
 }
+
 </script>
 </head>
 
@@ -77,7 +145,7 @@ function showData(e) {
 
 <div class="box">
 
-<h3 align="center">Student Form</h3>
+<h3>Student Form</h3>
 
 <form onsubmit="showData(event)">
 
@@ -88,31 +156,50 @@ function showData(e) {
 <input type="text" id="email" placeholder="Enter Email">
 
 <select id="branch">
+
 <option value="">Select Branch</option>
+
 <option>CSE</option>
+
 <option>ECE</option>
+
 <option>CS-AIML</option>
+
 <option>IS</option>
+
 </select>
 
 <select id="sub" multiple size="4">
+
 <option>OS</option>
+
 <option>Maths</option>
+
 <option>DAA</option>
+
 <option>Embedded</option>
+
 </select>
 
 <button type="submit">Submit</button>
 
 </form>
 
-<div id="out" style="margin-top:10px;"></div>
+<div id="out"></div>
 
 </div>
-    <p style="text-align:center;">
-      <a href="https://sanikagowda24.github.io/sem4-fet">go to HomePage</a>
-          <a href="https://sanikagowda24.github.io/sem4-fet/assignments/two_css_js.html">2 javascript</a> 
-    </p>
+
+<p>
+
+<a href="https://sanikagowda24.github.io/sem4-fet">
+Go to HomePage
+</a>
+
+<a href="https://sanikagowda24.github.io/sem4-fet/assignments/two_css_js.html">
+2 JavaScript
+</a>
+
+</p>
 
 </body>
 </html>
