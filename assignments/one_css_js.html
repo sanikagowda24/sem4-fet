@@ -1,72 +1,145 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      p {
-        text-align: center;
-      }
 
-      h1 {
-        color: red;
-        text-align: center;
-      }
+<head>
 
-      h2 {
-        color: purple;
-        text-align: center;
-      }
+<title>My Portfolio</title>
 
-      .box {
-        border: 2px solid black;
-        width: 60%;
-        margin: auto;
-        padding: 15px;
-        background-color: white;
-      }
-    </style>
-  </head>
+<style>
 
-  <body style="font-size:18px;">
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, indigo, mediumorchid);
+    color:white;
+    text-align:center;
+    font-size:18px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
 
-    <title>My portfolio</title>
+.box{
+    width:60%;
+    padding:30px;
+    border-radius:25px;
+    background: rgba(255,255,255,0.1);
+    box-shadow:0 0 15px black;
+}
 
-    <h1 style="font-size: 50px;">SANIKA N</h1>
-    
-    <h2 id="role">Aspiring software engineer</h2>
+h1{
+    font-size:55px;
+    margin-bottom:10px;
+    color:lavenderblush;
+}
 
-    <h2>
-      Computer Science Student At Mangalore Institute Of Technology And Engineering
-    </h2>
+h2{
+    color:lavender;
+    margin:15px;
+}
 
-    <div class="box">
-      <p style="font-size: 20px;">I am good in C and Java.</p>
+p{
+    font-size:20px;
+    line-height:1.6;
+}
 
-      <p>I have strong communication skills.</p>
+button{
+    margin-top:25px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:lavender;
+    color:indigo;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-      <p>
-        I am a quick learner and always ready to explore new technologies.
-        I have basic knowledge of HTML and web development.
-      </p>
-    </div>
+button:hover{
+    background:white;
+}
 
-    <br>
-<p style="text-align:center;">
-  <button onclick="changeRole()">Click Me</button>
+a{
+    color:lavender;
+    text-decoration:none;
+    margin:15px;
+    font-size:20px;
+}
+
+a:hover{
+    color:white;
+    text-decoration:underline;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>SANIKA N</h1>
+
+<h2 id="role">Aspiring Software Engineer</h2>
+
+<h2>
+Computer Science Student At Mangalore Institute Of Technology And Engineering
+</h2>
+
+<div class="box">
+
+<p>
+I am good in C and Java.
 </p>
-    <script>
-      function changeRole() {
-        var role = prompt("Enter new role:");
-        document.getElementById("role").innerHTML = role;
-        alert("Role changed successfully");
-      }
-    </script>
 
-    <br><br>
- <p style="text-align:center;">
-    <a href="https://sanikagowda24.github.io/sem4-fet/assignments/one_css.html"> 1st css</a>
-   </p>
-     <p style="text-align:center;">
-  <a href="https://sanikagowda24.github.io/sem4-fet">go to HomePage</a>
+<p>
+I have strong communication skills.
 </p>
 
-  </body>
+<p>
+I am a quick learner and always ready to explore new technologies.
+I have basic knowledge of HTML and web development.
+</p>
+
+</div>
+
+<br>
+
+<button onclick="changeRole()">
+Click Me
+</button>
+
+<script>
+
+function changeRole(){
+
+    var role = prompt("Enter new role:");
+
+    document.getElementById("role").innerHTML = role;
+
+    alert("Role changed successfully");
+}
+
+</script>
+
+<br><br>
+
+<p>
+
+<a href="https://sanikagowda24.github.io/sem4-fet/assignments/one_css.html">
+1st CSS
+</a>
+
+</p>
+
+<p>
+
+<a href="https://sanikagowda24.github.io/sem4-fet">
+Go to HomePage
+</a>
+
+</p>
+
+</body>
 </html>
