@@ -1,1 +1,202 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Customizer</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:40px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    flex-direction:column;
+    background:linear-gradient(to bottom, indigo, mediumorchid);
+    font-family:Arial, sans-serif;
+    color:white;
+    transition:0.5s;
+}
+
+h1{
+    font-size:40px;
+    color:lavenderblush;
+    margin-bottom:20px;
+}
+
+.form-container{
+    width:550px;
+    background:rgba(255,255,255,0.1);
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 0 15px black;
+    text-align:center;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:18px;
+    color:lavender;
+    text-align:left;
+}
+
+select,
+input[type="range"]{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:12px;
+    background:lavender;
+    color:indigo;
+    font-size:16px;
+}
+
+.list-box{
+    height:100px;
+}
+
+.control-group{
+    background:rgba(255,255,255,0.08);
+    padding:18px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+#previewBox{
+    margin-top:20px;
+    padding:25px;
+    border:2px dashed lavender;
+    border-radius:18px;
+    background:rgba(255,255,255,0.08);
+    transition:0.3s;
+    color:white;
+}
+
+.home-btn{
+    position:fixed;
+    top:20px;
+    right:30px;
+    background:lavender;
+    color:indigo;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.home-btn:hover{
+    background:white;
+}
+
+input[type="color"]{
+    width:100%;
+    height:45px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:lavender;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="https://sanashaikh171.github.io/sem4-fet/" class="home-btn" target="_blank">Home</a>
+
+<h1>UI Customizer</h1>
+
+<div class="form-container">
+
+<label for="themePicker">Page Theme:</label>
+<select id="themePicker">
+    <option value="linear-gradient(to bottom, indigo, mediumorchid)">Purple Theme</option>
+    <option value="linear-gradient(to bottom, midnightblue, slateblue)">Blue Theme</option>
+    <option value="linear-gradient(to bottom, darkgreen, seagreen)">Green Theme</option>
+</select>
+
+<label for="styleList">Text Styles (Ctrl+Click):</label>
+<select id="styleList" class="list-box" multiple>
+    <option value="bold">Bold</option>
+    <option value="italic">Italic</option>
+    <option value="uppercase">Uppercase</option>
+    <option value="underline">Underline</option>
+</select>
+
+<div class="control-group">
+
+<label for="textSlider">
+Text Size: <span id="sizeLabel">18px</span>
+</label>
+
+<input type="range" id="textSlider" min="14" max="40" value="18">
+
+<label for="colorPicker">Preview Text Color:</label>
+
+<input type="color" id="colorPicker" value="#ffffff">
+
+</div>
+
+<div id="previewBox">
+    <h3>Live Preview</h3>
+    <p>
+        Change settings above to see JavaScript event listeners in action!
+    </p>
+</div>
+
+</div>
+
+<script>
+
+const themePicker=document.getElementById("themePicker");
+const styleList=document.getElementById("styleList");
+const textSlider=document.getElementById("textSlider");
+const colorPicker=document.getElementById("colorPicker");
+const previewBox=document.getElementById("previewBox");
+const sizeLabel=document.getElementById("sizeLabel");
+
+themePicker.addEventListener("change",function(){
+    document.body.style.background=this.value;
+});
+
+styleList.addEventListener("change",function(){
+
+    const selected=Array.from(this.selectedOptions).map(opt=>opt.value);
+
+    previewBox.style.fontWeight=
+    selected.includes("bold")?"bold":"normal";
+
+    previewBox.style.fontStyle=
+    selected.includes("italic")?"italic":"normal";
+
+    previewBox.style.textTransform=
+    selected.includes("uppercase")?"uppercase":"none";
+
+    previewBox.style.textDecoration=
+    selected.includes("underline")?"underline":"none";
+});
+
+textSlider.addEventListener("input",function(){
+
+    previewBox.style.fontSize=this.value+"px";
+    sizeLabel.textContent=this.value+"px";
+
+});
+
+colorPicker.addEventListener("input",function(){
+
+    previewBox.style.color=this.value;
+    previewBox.style.borderColor=this.value;
+
+});
+
+</script>
+
+</body>
+</html>
