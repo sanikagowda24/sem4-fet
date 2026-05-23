@@ -3,32 +3,40 @@
     <title>MY PORTFOLIO</title>
   </head>
   <style>
-    h1{
+    body{
       font-family:arial;
-      text-align:center
-      background-color:light purple;
+      text-align:center;
+      background-color:lightgreen;
     }
     h2{
-      color:lavender;
       font-size:40px;
       text-align:center;
     }
     .container{
       background-color:lavender;
-      margine:none;
-      width:80px;
-      height:60px;
-      padding:30px
-      marign-radius:200px;
+      margin:auto;
+      width:400px;
+      height:300px;
+      padding:50px;
+      border-radius:200px;
     }
   </style>
   <body>
-    <div class="container"></div>
-    <h1>ADDITION CALCULATOR</h1>
+    <div class="container">
+    <h1 style="color:black;">ADDITION CALCULATOR</h1>
     <input type="number" id="num1" placeholder="First number">
     <input type="number" id="num2" placeholder="Second number">
      <button onclick="addNumbers()">Calculate</button>
-    <h2 id="result" style="color: black;">Answer: </h2>
-</div>
-  </body>
+    <h2 id="result">result: </h2>
+    </div>
+  <script>
+  function addNumbers() {
+    let n1 = Number(document.getElementById('num1').value);
+    let n2 = Number(document.getElementById('num2').value);
+    let add=n1+n2;
+    document.getElementById('result').innerHTML = "result: " +add;
+  }
+</script>
+</body>
 </html>
+
